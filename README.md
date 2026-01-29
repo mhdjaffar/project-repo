@@ -1,2 +1,2 @@
 # first-project-repo
-my project on robotics fron basics
+my project on robotics 
