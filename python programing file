@@ -1,1 +1,33 @@
+a=str(input("enter your full name: ")).capitalize()
+while True:
+        b = int(input("enter your roll number: "))
+        g=str(b)
+        if int(g[0:4])>7239:
+         print("you are from Robotics and Automation")
+        else:
+            print("you are from unknown department")
+        break
+print("Your name is",a)
+print("enter the marks of subjects English,Math,Social,Science")
+a=int(input("Enter the English Marks scored: "))
+b=int(input("Enter the Maths Marks scored: "))
+c=int(input("Enter the Social Marks Scored: "))
+d=int(input("Enter the Science Marks Scored: "))
+def getaverage(e,m,s,si):
+        average=(e+m+s+si)/4
+        return average
+j=getaverage(a,b,c,d)
+print("the average marks scored by you is ",j)
 
+def thegrade(n):
+    if n<=90:
+        print("you are just pass")
+    elif n<=110:
+        print("you are second class")
+    elif n<=150:
+        print("you are first class")
+    elif n>150 and n<=200:
+        print("you are distinction")
+    else:
+        print("you are failed")
+thegrade(j)
