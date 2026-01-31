@@ -1,0 +1,40 @@
+def ask_question(question, options, correct_answer, prize):
+    """
+    question: str - The question text
+    options: list - List of options
+    correct_answer: str/int - Correct answer
+    prize: int - Prize money for this question
+    """
+    global total_score  # Allows us to update the total score
+    print("\n" + question)
+    print(options)
+
+    # Get user input
+    answer = input("Enter your answer: ").capitalize() if isinstance(correct_answer, str) else int(
+        input("Enter your answer: "))
+
+    # Check answer
+    if answer == correct_answer:
+        total_score += prize
+        print(f"Correct! You won Rs {prize}. Total score: Rs {total_score}")
+    else:
+        print(f"Wrong answer! The correct answer was {correct_answer}. Total score: Rs {total_score}")
+
+
+# Question 1
+ask_question(
+    "Which is the biggest country?",
+    ["Russia", "China", "India", "USA"],
+    "Russia",
+    1000
+)
+
+# Question 2
+ask_question(
+    "Which is a prime number among these?",
+    [11, 15, 20, 24],
+    11,
+    1000
+)
+
+print("\nGame Over! Your total prize money is Rs", total_score)
